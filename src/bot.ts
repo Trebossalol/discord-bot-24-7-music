@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits } from 'discord.js';
+import { ActivityType, Client, GatewayIntentBits } from 'discord.js';
 import { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, VoiceConnectionStatus, entersState } from '@discordjs/voice';
 import dotenv from 'dotenv';
 import fs from 'fs';
@@ -25,8 +25,11 @@ if (!tracks.length) {
 const player = createAudioPlayer();
 
 function playNext(index = 0) {
-    const resource = createAudioResource(path.join(musicDir, tracks[index]));
+    const trackName = tracks[index]
+    const resource = createAudioResource(path.join(musicDir, trackName));
+
     player.play(resource);
+    client.user?.setActivity(trackName, { type: ActivityType.Listening });
 
     player.once(AudioPlayerStatus.Idle, () => {
         playNext((index + 1) % tracks.length); // loop
