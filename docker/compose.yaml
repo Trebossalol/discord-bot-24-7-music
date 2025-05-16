@@ -1,0 +1,12 @@
+services:
+  bot:
+    image: discord-bot-24-7:1.0
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: discord-bot-24-7
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ../music:/app/music
