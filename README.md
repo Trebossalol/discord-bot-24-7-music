@@ -1,10 +1,10 @@
 # Discord-Bot 24/7 Music
 
-This bot joins a fixed voice channel and plays the music in the music folder forever.
+This bot joins a fixed voice channel and plays the music in the `music` folder 24/7.
 
 ## Adding Music
 
-Just place the MP3 files into the music folder and restart the containers using the following command:
+Just place your MP3 files into the music folder and restart the containers using the following command:
 
 ```sh
 npm run docker:restart
