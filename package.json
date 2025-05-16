@@ -1,7 +1,6 @@
 {
   "name": "discord-bot-24-7-music",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node dist/bot.js",
@@ -9,9 +8,6 @@
     "docker:deploy": "docker compose -f docker/compose.yaml up --build -d",
     "docker:restart": "docker compose -f docker/compose.yaml restart"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "description": "",
   "dependencies": {
     "@discordjs/voice": "^0.18.0",
