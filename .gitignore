@@ -1,0 +1,4 @@
+node_modules
+docker/.env
+dist
+music/*.mp3

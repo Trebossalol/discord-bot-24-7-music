@@ -1,0 +1,25 @@
+{
+  "name": "discord-bot-24-7-music",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/bot.js",
+    "compile": "npx tsc",
+    "docker:deploy": "docker compose -f docker/compose.yaml up --build -d",
+    "docker:restart": "docker compose -f docker/compose.yaml restart"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@discordjs/voice": "^0.18.0",
+    "@t3-oss/env-core": "^0.13.4",
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "ffmpeg-static": "^5.2.0",
+    "typescript": "^5.8.3",
+    "zod": "^3.24.4"
+  }
+}
