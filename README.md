@@ -1,5 +1,7 @@
 # Discord-Bot 24/7 Music
 
+[![Docker Image CI](https://github.com/Trebossalol/discord-bot-24-7-music/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Trebossalol/discord-bot-24-7-music/actions/workflows/docker-image.yml)
+
 This bot joins a fixed voice channel and plays the music in the `music` folder 24/7.
 
 ## Adding Music
